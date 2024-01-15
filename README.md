@@ -1,4 +1,4 @@
-# Digital Wallet
+# Bistro - Landing Page
 
 Landing page for a fictional restaurant.
 
