@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Parisienne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/5b4f015aa1.js" crossorigin="anonymous"></script>
+
+  <title>Bistrô Lumiere</title>
+</head>
+
+<body>
+    <div class="headerSup">
+        <span class="dateInfo"></span>
+        <span class="nowInfo"></span>
+        <span class="openInfo"></span>
+    </div>
+
+    <header class="menuContainer">
+        <ul class="menu">
+            <li>Menu</li>
+            <li>Reservations</li>
+            <li><b>BISTRÔ<br>LUMIERE</b></li>
+            <li>Location<br>& Hours</li>
+            <li>Contact</li>
+        </ul>
+    </header>
+
+    <main>
+        <div class="logo">
+            <h1 class="nameLogo">BISTRÔ LUMIERE</h1>       
+            <p class="textLogo1">Refined flavors</p> 
+            <p class="textLogo2">Enlightening moments</p>
+            <a class="reserveLink" href="">Make your reservation now <i class="fa-solid fa-arrow-right fa-2xl" style="color: #292420;"></i></a>
+            <img src="img/img-logo.jpg">
+            <div class="iconMain">
+                <a href=""><i class="fa-brands fa-instagram fa-2xl" style="color: #292420;"></i></a>
+                <a href=""><i class="fa-brands fa-facebook fa-2xl" style="color: #292420;"></i></a>
+                <a href=""><i class="fa-brands fa-twitter fa-2xl" style="color: #292420;"></i></a>
+            </div>
+        </div>
+    </main>
+
+    <section class="about">
+        <img class="imgAbout" src="img/img-about.jpg">
+        <h1 class="aboutTitle">About us</h1>
+        <p class="aboutText">Located in the heart of the city, Bistrô Lumiere was born out of a passion for sharing special moments around good food. Founded in 1997, the bistro is the result of hard work and dedication from our talented team, committed to creating a unique atmosphere for gastronomy enthusiasts.
+        At Bistrô Lumiere, we believe that every meal is a celebration, and we look forward to welcoming you to our charming space. Whether it's for a special occasion, a gathering of friends, or a romantic evening, we are here to make each moment unforgettable.
+        </p>
+        <a class="aboutLink" href="">Discover our entire history <i class="fa-solid fa-arrow-right fa-2xl" style="color: #292420;"></i></a>
+    </section>
+
+    <section class="menuCard">
+        <h1 class="menuTitle">MENU</h1>
+        <ul class="menuButtons">
+            <li onclick="showMenuCard('appetizer')">Appetizer</li>
+            <li onclick="showMenuCard('mainDishe')">Main dishes</li>
+            <li onclick="showMenuCard('dessert')">Desserts</li>
+            <li onclick="showMenuCard('drink')">Drinks</li>
+        </ul>
+        <div class="appetizer hide">
+            <ul class="foodList">
+                <li>Truffle-infused Crostini Delight</li>
+                <li>Mediterranean Stuffed Grape Leaves</li>
+                <li>Artisanal Cheese Board Extravaganza</li>
+                <li>Seared Scallop Perfection</li>
+                <li>Crispy Calamari Symphony</li>
+                <li>Savory Truffle Crostini</li>
+                <li>Artisanal Cheese Board Extravaganza</li>
+                <li>Seared Scallop Delight</li>
+                <li>Bistro Bruschetta Trio</li>
+                <li>Lemon Herb Grilled Shrimp</li>
+            </ul>
+            <div class="imgMenu">
+                <img src="img/appetizer-1.jpg">
+                <img src="img/appetizer-2.jpg">
+                <img src="img/appetizer-3.jpg">
+            </div>
+        </div>
+
+        <div class="mainDishe hide">
+            <ul class="foodList">
+                <li>Filet Mignon Perfection</li>
+                <li>Lemon Herb Grilled Salmon</li>
+                <li>Wild Mushroom Risotto</li>
+                <li>Chicken Marsala</li>
+                <li>Vegetarian Eggplant Parmesan</li>
+                <li>Shrimp Scampi Linguine</li>
+                <li>Beef Bourguignon</li>
+                <li>Vegetable Pad Thai</li>
+                <li>Grilled Vegetable Polenta Stack</li>
+                <li>Pesto Chicken Penne</li>
+            </ul>
+            <div class="imgMenu">
+                <img src="img/dishe-1.jpg">
+                <img src="img/dishe-2.jpg">
+                <img src="img/dishe-3.jpg">
+            </div>
+        </div>
+
+        <div class="dessert hide">
+            <ul class="foodList">
+                <li>Decadent Chocolate Fondue</li>
+                <li>Classic Tiramisu Elegance</li>
+                <li>Citrus-infused Panna Cotta</li>
+                <li>Crème Brûlée Bliss</li>
+                <li>Triple Chocolate Mousse Delight</li>
+                <li>Lemon Raspberry Tart</li>
+                <li>Hazelnut Praline Profiteroles</li>
+                <li>Strawberry Shortcake Extravaganza</li>
+                <li>Red Velvet Cheesecake Heaven</li>
+                <li>Mango Coconut Rice Pudding</li>
+            </ul>
+            <div class="imgMenu">
+                <img src="img/dessert-1.jpg">
+                <img src="img/dessert-2.jpg">
+                <img src="img/dessert-3.jpg">
+            </div>
+        </div>
+
+        <div class="drink show">
+            <ul class="foodList">
+                <li>Classic Martini</li>
+                <li>Mango Mojito</li>
+                <li>Old Fashioned</li>
+                <li>Espresso Martini</li>
+                <li>Cucumber Basil Gin Fizz</li>
+                <li>Passion Fruit Margarita</li>
+                <li>Cosmopolitan</li>
+                <li>Blueberry Mint Lemonade</li>
+                <li>Ginger Peach Bourbon Smash</li>
+                <li>Pina Colada</li>
+            </ul>
+            <div class="imgMenu">
+                <img src="img/drink-1.jpg">
+                <img src="img/drink-2.jpg">
+                <img src="img/drink-3.jpg">
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="reserve">
+            <h2 class="reserveText">
+                <i class="fa-solid fa-arrow-down fa-2xl" style="color: #292420;"></i>
+                <br><br>MAKE YOUR<br>RESERVATION
+                <br><br><p>BY PHONE NUMBER - +55 (XX) XXXX-XXXX
+                    <br>OR
+                    <br>ASIDE <i class="fa-solid fa-arrow-right fa-lg" style="color: #292420;"></i>
+                </p>
+            </h2>
+            <div class="inputContainer">
+                <input class="inputName" type="text" placeholder="Name">
+                <input class="inputSurname" type="text" placeholder="Surname">
+                <input class="inputEmail" type="email" placeholder="Email">
+                <input class="inputPhone" type="number" placeholder="Phone Number">
+                <input class="inputDate" type="date">
+                <select class="selectHour">
+                    <option value="">18H:00 - 20H:00</option>
+                    <option value="">20H:00 - 22H:00</option>
+                    <option value="">22H:00 - 00H:00</option>
+                </select>
+                <button class="reserveButton">MAKE A RESERVE</button>
+            </div>
+        </div>
+        <div class="footer">
+            <p>
+                <a href="">Menu</a> <a href="">Reservations</a> <a href="">Location & Hours</a> <a href="">Contact</a>
+                +55 (xx) xxxx-xxxx | contact@contact.com
+            </p>
+            <p>Copyright - 2023 - By <a href="https://github.com/WindFox8">Rafael Correr <i class="fa-brands fa-github" ></i></a></p>
+        </div>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>

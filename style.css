@@ -1,0 +1,444 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body{
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(50% 50% at 50% 50%, #fff7d0 0%, #e1d7a3 100%);
+    
+  }
+
+  .headerSup{
+    position: sticky;
+    top:0;
+    font-family: "Inconsolata", monospace;
+    background-color: #292420;
+    height: 25px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 400;
+    font-size: 16px;
+    color: #e3e1d3;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #e1d7a3;
+    z-index: 1000;
+  }
+    
+  .menuContainer {
+    position: sticky;
+    top: 25px;
+    width: 100%;
+    background-color: #292420;
+    z-index: 1000;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menuContainer:before {
+    content: "";
+    position: fixed;
+    left: 20px;
+    top: 0;
+    width: 10px;
+    height: 100px;
+    z-index: 1500;
+    border-right: 1px solid #e1d7a3;
+  }
+
+  .menuContainer:after {
+    content: "";
+    position: fixed;
+    right: 30px;
+    top: 0;
+    width: 10px;
+    height: 100px;
+    z-index: 1500;
+    border-right: 1px solid #e1d7a3;
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    font-family: "Inconsolata", monospace;
+    font-size: 25px;
+    font-weight: 500;
+  }
+  
+  .menu li {
+    text-decoration: none;
+    color: #e3e1d3;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 200px;
+    height: 75px;
+    border-right: 1px solid #e1d7a3;
+  }
+
+
+  .menu li:last-child{
+    border-right: none;
+  }
+  
+  .menu li:hover {
+    background-color: #e1d7a3;
+    color: #292420;
+  }
+  
+main{
+    height: calc(100vh - 100px);
+    width: 100%;
+    border-bottom: 3px double #292420;
+    
+}
+
+main:before {
+    content: "";
+    position: fixed;
+    left: 20px;
+    top: 100px;
+    width: 10px;
+    height: calc(100vh - 100px);
+    z-index: 1500;
+    border-right: 1px solid #292420; 
+}
+
+main:after {
+    content: "";
+    position: fixed;
+    right: 30px;
+    top: 100px;
+    width: 10px;
+    height: calc(100vh - 100px);
+    z-index: 1500;
+    border-right: 1px solid #292420;
+}
+
+.logo {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+}
+
+.textLogo1, .textLogo2 {
+  font-family: "Parisienne", cursive;
+  font-size: 5vh;
+  color: #292420;
+  padding: 10px;
+}
+
+.textLogo1 {
+  position: absolute;
+  top: calc(100px + 30%);
+  left: 50%;
+  transform: translate(-250%, 0);
+}
+
+.textLogo2 {
+  position:absolute;
+  top: calc(100px + 40%);
+  left: 50%;
+  transform: translate(-150%, 0);
+}
+
+.logo > img {
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  padding: 5px;
+  border: 5px solid #292420;
+  position: absolute;
+  top: calc(100px + 7%);
+  left: 50%;
+  transform: translate(-15%, 0);
+  width: 60vh;
+}
+
+.reserveLink {
+  text-decoration: none;
+  font-family: "Inconsolata", monospace;
+  color: #292420;
+  font-size: 4vh;
+  position: absolute;
+  bottom: 10%;
+  left: calc(30px + 5%);
+}
+
+.nameLogo {
+  font-family: "Inconsolata", monospace;
+  color: #e1d7a3;
+  background-color: #292420;
+  padding: 10px;
+  font-size: 8vh;
+  position: absolute;
+  top: calc(100px + 10%);
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 100;
+}
+
+.iconMain {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 40px;
+  top: calc(100px + 50%);
+  transform: translate(0, -50%);
+}
+
+.iconMain > a{
+  margin-bottom: 150%;
+}
+
+.about{
+  height: calc(100vh - 100px); 
+  display: grid;
+  grid-template-rows: 20% 60% 20%;
+  grid-template-areas: 
+  "imgAbout aboutTitle"
+  "imgAbout aboutText"
+  "imgAbout aboutLink";
+  padding: 0 30px 0 30px;
+  align-items: center;
+  border-bottom: 3px double #292420;
+  text-align: center;
+}
+
+.imgAbout {
+  grid-area: imgAbout;
+  width: 100%;
+  padding: 5px;
+  border: 5px solid #292420;
+  margin: 10px;
+}
+
+.aboutTitle {
+  grid-area: aboutTitle;
+  margin: 20px;
+  padding: 10px;
+  font-size: 4vh;
+  font-family: "Inconsolata", monospace;
+  color: #e1d7a3;
+  background-color: #292420;
+}
+
+.aboutText {
+  grid-area: aboutText;
+  margin: 20px;
+  font-family: "Inconsolata", monospace;
+  color: #292420;
+  font-size: 3vh;
+}
+
+.aboutLink {
+  grid-area: aboutLink;
+  margin: 20px;
+  text-decoration: none;
+  font-family: "Inconsolata", monospace;
+  color: #292420;
+  font-size: 4vh;
+}
+
+.menuCard {
+  height: calc(100vh - 100px);
+  border-bottom: 3px double #292420;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuTitle {
+  font-family: "Inconsolata", monospace;
+  color: #292420;
+  font-size: 4vh;
+  margin: 10px;
+}
+
+.menuButtons {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  font-family: "Inconsolata", monospace;
+  color: #292420;
+}
+
+.menuButtons li {
+  text-decoration: none;
+  color: #e3e1d3;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 200px;
+  height: 75px;
+  border-right: 1px solid #292420;
+  color: #292420;
+  font-size: 3vh;
+}
+
+
+.menuButtons li:last-child{
+  border-right: none;
+}
+
+.menuButtons li:hover {
+  background-color: #e1d7a3;
+}
+
+.appetizer, .mainDishe, .dessert, .drink {
+  grid-template-columns: 50% 50%;
+  background-color: #292420;
+  margin: 10px;
+  padding: 10px;
+}
+
+.imgMenu {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+
+.foodList {
+  margin: 0;
+  padding: 0;
+  font-family: "Inconsolata", monospace;
+  color: #e3e1d3; 
+}
+
+
+
+.foodList > li{
+  margin: 30px;
+}
+
+.show {
+  display: grid;
+}
+
+.hide {
+  display: none;
+}
+
+footer {
+  height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #292420;  
+}
+
+.footer > p > a {
+  text-decoration: none;
+  margin-right: 100px; 
+  color: #e3e1d3;
+}
+
+.footer > p > a:hover {
+  color: #695b50;
+}
+
+.footer > p {
+  font-family: "Inconsolata", monospace;
+  color: #e3e1d3;
+  padding: 5px;
+}
+
+.reserve {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin: 0 30px 0 30px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputContainer {
+  display: grid;
+  grid-template-areas: 
+  "inputName inputSurname"
+  "inputEmail inputEmail"
+  "inputPhone inputPhone"
+  "inputDate selectHour"
+  "reserveButton reserveButton";
+  margin-top: 50px;
+}
+
+.inputName{
+  grid-area: inputName;
+}
+
+.inputSurname{
+  grid-area: inputSurname;
+}
+
+.inputEmail{
+  grid-area: inputEmail;
+}
+
+.inputPhone{
+  grid-area: inputPhone;
+}
+
+.inputDate{
+  grid-area: inputDate;
+}
+
+.selectHour{
+  grid-area: selectHour;
+}
+
+.reserveButton{
+  grid-area: reserveButton;
+}
+
+input, .reserveButton, .selectHour {
+  height: 100px;
+  background: transparent;
+  border: 1px solid #292420;
+  font-family: "Inconsolata", monospace;
+  text-align: center;
+  font-size: 3vh;
+  color: #695b50;
+}
+
+.reserveButton {
+  background: #292420;
+  color: #e1d7a3;
+  font-weight: 800;
+}
+
+.reserveButton:hover {
+  background: #e1d7a3;
+  color: #292420;
+}
+
+.reserveText {
+  color: #292420;
+  font-family: "Inconsolata", monospace;
+  font-size: 7vh;
+}
+
+.reserveText > p {
+  font-size: 3vh;
+}
